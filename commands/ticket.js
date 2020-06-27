@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 
     const catagoryID = "726414717794386012";
 
-    var userName = message.author.userName;
+    var userName = message.author.guild.username;
     var userDiscriminator = message.author.discriminator;
 
     var ticketBestaat = false;
