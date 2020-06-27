@@ -15,7 +15,7 @@ module.exports.run = async(bot, message, args) => {
             .setDescription("De ticket is gemarkeerd als **Voltooid**")
             .setFooter("play.quadgames.ga | QuadGames", "https://i.imgur.com/ypA0sc3.png")
     
-        var ticketChannel = message.member.guild.channels.cahce.find(channel => channel.name === "log")
+        var ticketChannel = message.member.guild.channels.cache.find(channel => channel.name === "log")
         if (!ticketChannel) return message.reply("Kanaal bestaat niet.");
 
         ticketChannel.send(embedCreateTicket);
