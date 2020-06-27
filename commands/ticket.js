@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 
     const catagoryID = "726414717794386012";
 
-    var userName = message.author.guild.username;
+    var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
     var ticketBestaat = false;
@@ -24,7 +24,7 @@ module.exports.run = async(bot, message, args) => {
     if(ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("Hoi " + message.author.userName)
+        .setTitle("Hoi " + message.author.username)
         .setColor("#fc7703")
         .setFooter("Je ticket wordt aangemaakt.", "https://i.imgur.com/ypA0sc3.png");
     
