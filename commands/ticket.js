@@ -35,11 +35,11 @@ module.exports.run = async(bot, message, args) => {
     }
 
     const channelName = `ticket-${message.author.id}`
-    if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.username.toLowerCase()}`)) {
+    if(message.guild.channels.cache.find(channel => channel.name === `ticket-<@${message.author.username.toLowerCase()}>`)) {
         return message.channel.send("Sorry maar je hebt al een lopende ticket.")
     }
 
-    message.guild.channels.create(channelName, { parent: SupportCategory.id, topic: `Ticket Owner: ${message.author.id}`}).then(c => {
+    message.guild.channels.create(channelName, { parent: SupportCategory.id, topic: `Ticket Owner: <@${message.author.id}>`}).then(c => {
         const sr = message.guild.roles.cache.get(supportrole)
         const everyone = message.guild.roles.cache.find(role => role.name === `@everyone`)
         c.updateOverwrite(sr, {

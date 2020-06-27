@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    let SupportCategory = message.guild.channels.cache.find(category => category.name === "Tickets");
+    var SupportCategory = message.guild.channels.cache.find(category => category.name === "Tickets");
 
     if(message.guild.me.hasPermission(`MANAGE_CHANNELS`) && !SupportCategory) {
         message.channel.delete();
