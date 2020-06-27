@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
 
     message.guild.channels.cache.forEach(channel => {
         
-        if(channel.name == userName.toLowerCase() + "-" + userDiscriminator){
+        if(channel.name == userName + "-" + userDiscriminator){
             ticketBestaat = true;
 
             message.reply("Je hebt al een bestaande ticket.");
