@@ -63,7 +63,7 @@ module.exports.run = async(bot, message, args) => {
         message.channel.send(CreatedTicketEmbed)
         let GreetEmbed = new discord.MessageEmbed()
             .setColor("#fc7703")
-            .addField(`Nieuw Support Ticket`, `<@${message.auhtor.id}> Bedankt voor het aanmaken van een ticket. Je wordt zo spoedig mogelijk geholpen.`)
+            .addField(`Nieuw Support Ticket`, `<@${message.author.id}> Bedankt voor het aanmaken van een ticket. Je wordt zo spoedig mogelijk geholpen.`)
             .addField(`Probleem:`, reason)
             .setTimestamp()
             .setFooter("play.quadgames.ga | QuadGames", "https://i.imgur.com/ypA0sc3.png")
