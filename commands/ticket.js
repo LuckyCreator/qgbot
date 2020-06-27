@@ -34,7 +34,7 @@ module.exports.run = async(bot, message, args) => {
         return message.channel.send("Geef een reden op om een ticket aan te kunnen maken.")
     }
 
-    const channelName = `ticket-${message.author.userName}-${message.auhtor.discriminator}`
+    const channelName = `ticket-${member.author.userName}-${message.auhtor.discriminator}`
     if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.username.toLowerCase()}-${message.author.discriminator}`)) {
         return message.channel.send("Sorry maar je hebt al een lopende ticket.")
     }
