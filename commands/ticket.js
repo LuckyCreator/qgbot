@@ -4,14 +4,14 @@ module.exports.run = async(bot, message, args) => {
 
     const catagoryID = "726414717794386012";
 
-    var userName = message.author.userName;
+    var userName = message.author.username;
     var userDiscriminator = message.author.discriminator;
 
     var ticketBestaat = false;
 
     message.guild.channels.cache.forEach(channel => {
         
-        if(channel.name == userName + "-" + userDiscriminator){
+        if(channel.name == userName.toLowerCase + "-" + userDiscriminator){
             ticketBestaat = true;
 
             message.reply("Je hebt al een bestaande ticket.");
