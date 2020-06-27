@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
     let SupportCategory = message.guild.channels.cache.find(category => category.name === "Tickets");
 
     if(message.guild.me.hasPermission(`MANAGE_CHANNELS`) && !SupportCategory) {
-        SupportCategory = await message.guild.channels.createChannel(`Tickets`, {
+        SupportCategory = await message.guild.channels.create(`Tickets`, {
             type: "category",
         });
     };
