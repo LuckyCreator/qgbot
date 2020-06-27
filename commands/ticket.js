@@ -24,13 +24,13 @@ module.exports.run = async(bot, message, args) => {
     if(ticketBestaat) return;
 
     var embed = new discord.MessageEmbed()
-        .setTitle("Hoi " + message.author.username)
+        .setTitle("Hoi " + message.author.userName)
         .setColor("#fc7703")
         .setFooter("Je ticket wordt aangemaakt.", "https://i.imgur.com/ypA0sc3.png");
     
     message.channel.send(embed);
 
-    message.guild.channels.create(userName.toLowerCase + "-" + userDiscriminator, {type: "text"}).then(
+    message.guild.channels.create(message.guild.userName.toLowerCase + "-" + userDiscriminator, {type: "text"}).then(
         (createdChannel) => {
             createdChannel.setParent(catagoryID).then(
                 (settedParent) => {
