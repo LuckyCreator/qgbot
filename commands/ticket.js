@@ -57,7 +57,7 @@ module.exports.run = async(bot, message, args) => {
         let CreatedTicketEmbed = new discord.MessageEmbed()
             .setColor("#fc7703")
             .setTitle("Nieuw Support Ticket")
-            .setDescription(`<@${message.author.id}> Je support ticket kanaal is <#${c.id}`)
+            .setDescription(`<@${message.author.id}> Je support ticket kanaal is <#${c.id}>`)
             .setTimestamp()
             .setFooter("play.quadgames.ga | QuadGames", "https://i.imgur.com/ypA0sc3.png")
         message.channel.send(CreatedTicketEmbed)
@@ -67,7 +67,7 @@ module.exports.run = async(bot, message, args) => {
             .addField(`Probleem:`, reason)
             .setTimestamp()
             .setFooter("play.quadgames.ga | QuadGames", "https://i.imgur.com/ypA0sc3.png")
-        c.send(GreetEmbed)
+        c.channel.send(GreetEmbed)
 
     }).catch(console.error);
 
