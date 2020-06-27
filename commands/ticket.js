@@ -67,7 +67,7 @@ module.exports.run = async(bot, message, args) => {
             .addField(`Probleem:`, reason)
             .setTimestamp()
             .setFooter("play.quadgames.ga | QuadGames", "https://i.imgur.com/ypA0sc3.png")
-        c.channel.send(GreetEmbed)
+        c.send(GreetEmbed)
 
     }).catch(console.error);
 
