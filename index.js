@@ -52,6 +52,7 @@ client.on("message", async message => {
 
     var args = messageArray.slice(1);
 
+    if(!message.content.startsWith(prefix)) return;
 
     var commands = client.commands.get(command.slice(prefix.length));
 
