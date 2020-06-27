@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
 
     var ticketBestaat = false;
 
-    message.guild.channels.cache.forEach(channel => {
+    message.guild.channels.forEach(channel => {
         
         if(channel.name == userName.toLowerCase() + "-" + userDiscriminator){
             ticketBestaat = true;
