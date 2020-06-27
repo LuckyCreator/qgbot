@@ -29,7 +29,7 @@ module.exports.run = async(bot, message, args) => {
 
     }
 
-    var announceEmbed = discord.MessageEmbed()
+    var announceEmbed = new discord.MessageEmbed()
         .setTitle("**MEDEDELING**")
         .setColor("#fc7703")
         .setDescription(`Bericht van ${message.author} \n\n ${options.titel} \n ${options.bericht}`)
