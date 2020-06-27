@@ -35,7 +35,7 @@ module.exports.run = async(bot, message, args) => {
     }
 
     const channelName = `ticket-${message.author.username}`
-    if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.user.toLowerCase()}`)) {
+    if(message.guild.channels.cache.find(channel => channel.name === `ticket-${message.author.username.toLowerCase()}`)) {
         return message.channel.send("Sorry maar je hebt al een lopende ticket.")
     }
 
