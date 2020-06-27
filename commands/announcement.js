@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
 
-    if(!message.author.member.hasPermission("MANAGE_CHANNELS")) return message.reply("Sorry jij mag dit helaas niet.");
+    if(!message.author.member.hasPermission(`MANAGE_CHANNELS`)) return message.reply("Sorry jij mag dit helaas niet.");
 
     var seperator = "|";
 
