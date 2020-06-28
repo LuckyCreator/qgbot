@@ -34,7 +34,7 @@ module.exports.run = async(bot, message, args) => {
         var winners = [];
         var inList = false;
 
-        var peopleReacted = embedSend.reactions.cache.get("🎉").user.cache.array();
+        var peopleReacted = embedSend.reactions.cache.get("🎉").id.cache.array();
 
         for (let i = 0; i < peopleReacted.length; i++) {
 
