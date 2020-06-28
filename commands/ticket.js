@@ -17,14 +17,14 @@ module.exports.run = async(bot, message, args) => {
         message.guild.send("Sorry maar je hebt hier helaas geen rechten voor.")
     }
 
-    if(!message.guild.roles.cache.find(role => role.name === "Support Team")) {
+    if(!message.guild.roles.cache.find(role => role.name === "Support-Team")) {
         await (message.guild.roles.create({
-            name: `Support Team`,
+            name: `Support-Team`,
             color: `YELLOW`,
         }));
     };
 
-    let supportrole = message.guild.roles.cache.find(role => role.name === "Support Team")
+    let supportrole = message.guild.roles.cache.find(role => role.name === "Support-Team")
 
     if(!supportrole) {
         return message.channel.send("Sorry er is wat mis gegaan. Vraag AlwaysLucky_#2666 voor hulp!")
