@@ -14,7 +14,7 @@ module.exports.run = async(client, message, args) => {
         } else if(result == "schaar") {
             return message.channel.send(`Ik heb ${result} :scissors:, Jij wint!`);
         } else if(result == "steen") {
-            return message.channel.send(`Ik heb ${result} :moyal:, Het is gelijkspel!`)
+            return message.channel.send(`Ik heb ${result} :moyai:, Het is gelijkspel!`)
 
         }
     }
@@ -24,7 +24,7 @@ module.exports.run = async(client, message, args) => {
         } else if(result == "schaar") {
             return message.channel.send(`Ik heb ${result} :scissors:, Ik win!`);
         } else if(result == "steen") {
-            return message.channel.send(`Ik heb ${result} :moyal:, Jij wint!`)
+            return message.channel.send(`Ik heb ${result} :moyai:, Jij wint!`)
             
         }
     }
@@ -34,7 +34,7 @@ module.exports.run = async(client, message, args) => {
         } else if(result == "schaar") {
             return message.channel.send(`Ik heb ${result} :scissors:, Het is gelijkspel!!`);
         } else if(result == "steen") {
-            return message.channel.send(`Ik heb ${result} :moyal:, Ik win!`)
+            return message.channel.send(`Ik heb ${result} :moyai:, Ik win!`)
             
         }
     }
