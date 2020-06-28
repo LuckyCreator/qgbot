@@ -23,6 +23,7 @@ module.exports.run = async(client, message, args) => {
 
     var giveawayEmbed = new discord.MessageEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
+        .setColor("#fc7703")
         .setFooter(`Vervalt om: ${dateEnd}`)
         .setDescription(item);
     var embedSend = await message.channel.send(giveawayEmbed);
